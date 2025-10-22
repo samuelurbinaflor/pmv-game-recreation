@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=4 uid="uid://bxpqc131ue83v"]
+
+[ext_resource type="Texture2D" uid="uid://dibr7mx1iux4b" path="res://assets/lakes.png" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://sqoil74susur" path="res://assets/tiles.png" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://q6mmmxqx2foc" path="res://scenes/fireboy.tscn" id="3_lnu2h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
+texture = ExtResource("1_yqjtg")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iywne"]
+sources/0 = SubResource("TileSetAtlasSource_lbhrr")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
+texture = ExtResource("2_lnu2h")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u5sy4"]
+sources/2 = SubResource("TileSetAtlasSource_p57ef")
+
+[node name="Game" type="Node2D"]
+
+[node name="lakes" type="TileMapLayer" parent="."]
+z_index = -1
+tile_set = SubResource("TileSet_iywne")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAP//AgACAAAAAAABAP//AgACAAAAAAACAP//AgACAAAAAAADAP//AgACAAAAAAAEAP//AgACAAAAAAAFAP//AgACAAAAAAAGAP//AgACAAAAAAAHAP//AgACAAAAAAAIAP//AgACAAAAAAAJAP//AgACAAAAAAAKAP//AgACAAAAAAALAP//AgACAAAAAAAMAP//AgACAAAAAAANAP//AgACAAAAAAAOAP//AgACAAAAAAAPAP//AgACAAAAAAAQAP//AgACAAAAAAAAAP7/AgABAAAAAAAOAP7/AgAAAAAAAAAPAP3/AgAAAAAAAAAQAPz/AgAAAAAAAAARAPv/AgAAAAAAAAAPAP7/AgACAAAAAAAQAP7/AgACAAAAAAAQAP3/AgACAAAAAAARAP3/AgACAAAAAAARAPz/AgACAAAAAAARAP7/AgACAAAAAAARAP//AgACAAAAAAAAAB8AAgACAAAAAAAAACAAAgACAAAAAAABACAAAgACAAAAAAACACAAAgACAAAAAAADACAAAgACAAAAAAAEACAAAgACAAAAAAAFACAAAgACAAAAAAAGACAAAgACAAAAAAAHACAAAgACAAAAAAAIACAAAgACAAAAAAAJACAAAgACAAAAAAAKACAAAgACAAAAAAALACAAAgACAAAAAAAMACEAAgACAAAAAAANACEAAgACAAAAAAAOACEAAgACAAAAAAAPACEAAgACAAAAAAAQACEAAgACAAAAAAARACEAAgACAAAAAAASACEAAgACAAAAAAATACEAAgACAAAAAAAUACAAAgACAAAAAAAVACAAAgACAAAAAAAWACAAAgACAAAAAAABAB8AAgABAAAAAAAMACAAAgABAAAAAAATACAAAgAAAAAAAAAUAB8AAgAAAAAAAAAVAB4AAgAAAAAAAAAWAB0AAgAAAAAAAAAVAB8AAgACAAAAAAAWAB8AAgACAAAAAAAWAB4AAgACAAAAAAAJABsAAgABAAAAAAA=")
+tile_set = SubResource("TileSet_u5sy4")
+
+[node name="fireboy2" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(127, 399)

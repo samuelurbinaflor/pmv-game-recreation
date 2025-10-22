@@ -146,5 +146,5 @@ A nivel artístico es muy mejorable y fácil de reemplazar por otro estilo compl
 <br>
 
 ## Webgrafía
-1. Minijuegos.com. [https://www.minijuegos.com/](https://www.minijuegos.com/)
+1. Minijuegos.com. "Fireboy and Watergirl". [https://www.minijuegos.com/](https://www.minijuegos.com/juego/fireboy-and-watergirl-the-forest-temple/)
 2. Wikipedia. “Fireboy and Watergirl”. [https://en.wikipedia.org/wiki/Fireboy_and_Watergirl](https://en.wikipedia.org/wiki/Fireboy_and_Watergirl)  
