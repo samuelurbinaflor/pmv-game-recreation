@@ -19,6 +19,7 @@ radius = 11.0
 height = 32.0
 
 [node name="fireboy" type="CharacterBody2D"]
+collision_mask = 52
 script = ExtResource("1_cxg85")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -58,7 +58,12 @@ retry={
 
 [layer_names]
 
-2d_physics/layer_1="Player"
+2d_physics/layer_1="Fireboy"
+2d_physics/layer_2="Watergirl"
+2d_physics/layer_3="Map"
+2d_physics/layer_4="Lava"
+2d_physics/layer_5="Water"
+2d_physics/layer_6="Green"
 
 [rendering]
 
