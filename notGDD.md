@@ -14,4 +14,6 @@
 ## Animaciones
 - Idle
 - Correr
-- Saltar
+- Saltar quieto
+- Saltar en movimiento
+- Caer
