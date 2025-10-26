@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
@@ -22,11 +23,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
-
- # Mover y detectar colisión
-	var collision = move_and_collide(velocity * delta)
-	if collision:
-		var layer = collision.get_collider().get_instance_id()
-		if layer != 34829501831:
-			print(layer)
 	
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	die()
+	
+func die():
+	sprite.hide()
+	get_tree().reload_current_scene()

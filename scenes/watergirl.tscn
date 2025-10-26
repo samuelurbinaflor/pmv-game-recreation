@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkebvsu0ckubv"]
+[gd_scene load_steps=6 format=3 uid="uid://bkebvsu0ckubv"]
 
 [ext_resource type="Script" uid="uid://cgsowpe64cm7n" path="res://scripts/watergirl.gd" id="1_e38vc"]
 [ext_resource type="Texture2D" uid="uid://bdqxwp183u2xk" path="res://assets/drop.png" id="1_evcic"]
@@ -18,10 +18,13 @@ animations = [{
 radius = 11.0
 height = 32.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e38vc"]
+radius = 11.0
+height = 32.0
+
 [node name="watergirl" type="CharacterBody2D"]
-z_index = 5
 collision_layer = 2
-collision_mask = 44
+collision_mask = 4
 script = ExtResource("1_e38vc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -29,3 +32,12 @@ sprite_frames = SubResource("SpriteFrames_34thi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_o1uv5")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_e38vc")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

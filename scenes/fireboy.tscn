@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://q6mmmxqx2foc"]
+[gd_scene load_steps=6 format=3 uid="uid://q6mmmxqx2foc"]
 
 [ext_resource type="Texture2D" uid="uid://bm1c8bd5hx33f" path="res://assets/flame.png" id="1_0yc3l"]
 [ext_resource type="Script" uid="uid://iqags6mvq87v" path="res://scripts/fireboy.gd" id="1_cxg85"]
@@ -18,8 +18,12 @@ animations = [{
 radius = 11.0
 height = 32.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxg85"]
+radius = 11.0
+height = 32.0
+
 [node name="fireboy" type="CharacterBody2D"]
-collision_mask = 52
+collision_mask = 4
 script = ExtResource("1_cxg85")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -27,3 +31,11 @@ sprite_frames = SubResource("SpriteFrames_34thi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_o1uv5")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 48
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_cxg85")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
