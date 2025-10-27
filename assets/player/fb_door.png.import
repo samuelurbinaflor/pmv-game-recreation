@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm1c8bd5hx33f"
-path="res://.godot/imported/flame.png-41d703abe50687fb2c52ca996670aaa7.ctex"
+uid="uid://dc12gmpwj522s"
+path="res://.godot/imported/fb_door.png-cc3d871e8f1ca2d015dfb47470982afd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/flame.png"
-dest_files=["res://.godot/imported/flame.png-41d703abe50687fb2c52ca996670aaa7.ctex"]
+source_file="res://assets/player/fb_door.png"
+dest_files=["res://.godot/imported/fb_door.png-cc3d871e8f1ca2d015dfb47470982afd.ctex"]
 
 [params]
 

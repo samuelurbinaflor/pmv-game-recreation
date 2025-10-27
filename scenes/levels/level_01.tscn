@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bxpqc131ue83v"]
+[gd_scene load_steps=13 format=4 uid="uid://bxpqc131ue83v"]
 
 [ext_resource type="Texture2D" uid="uid://dibr7mx1iux4b" path="res://assets/tiles/lakes.png" id="1_1ey3t"]
 [ext_resource type="Texture2D" uid="uid://cwsj74dn0mtax" path="res://assets/tiles/white-tiles.png" id="2_t0hvh"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bkebvsu0ckubv" path="res://scenes/watergirl.tscn" id="5_ijn0p"]
 [ext_resource type="PackedScene" uid="uid://c18dm8ohwxg8u" path="res://scenes/objects/gems/blue_gem.tscn" id="6_jmes4"]
 [ext_resource type="PackedScene" uid="uid://bc6tfq6myci5x" path="res://scenes/objects/gems/red_gem.tscn" id="7_tyxjt"]
-[ext_resource type="PackedScene" uid="uid://feutxfunnlst" path="res://scenes/objects/box.tscn" id="10_r72dd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_1ey3t")
@@ -22,11 +21,11 @@ texture = ExtResource("1_1ey3t")
 2:0/0/physics_layer_3/polygon_0/points = PackedVector2Array(-8, 3.0457659, 8, 2.9442406, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_iywne"]
-physics_layer_0/collision_layer = 32
+physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
-physics_layer_1/collision_layer = 16
+physics_layer_1/collision_layer = 32
 physics_layer_1/collision_mask = 0
-physics_layer_2/collision_layer = 8
+physics_layer_2/collision_layer = 64
 physics_layer_2/collision_mask = 0
 physics_layer_3/collision_layer = 4
 physics_layer_3/collision_mask = 3
@@ -63,7 +62,7 @@ sources/1 = SubResource("TileSetAtlasSource_p57ef")
 
 [node name="lakes" type="TileMapLayer" parent="."]
 z_index = 2
-tile_map_data = PackedByteArray("AAATAB0AAAACAAAAAAAUAB0AAAACAAAAAAAVAB0AAAACAAAAAAAWAB0AAAACAAAAAAAXAB0AAAACAAAAAAAbAB0AAAABAAAAAAAcAB0AAAABAAAAAAAdAB0AAAABAAAAAAAeAB0AAAABAAAAAAAfAB0AAAABAAAAAAAZABcAAAAAAAAAAAAaABcAAAAAAAAAAAAbABcAAAAAAAAAAAAcABcAAAAAAAAAAAAdABcAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAATAB0AAAAAAAAAAAAUAB0AAAAAAAAAAAAVAB0AAAAAAAAAAAAWAB0AAAAAAAAAAAAXAB0AAAAAAAAAAAAbAB0AAAABAAAAAAAcAB0AAAABAAAAAAAdAB0AAAABAAAAAAAeAB0AAAABAAAAAAAfAB0AAAABAAAAAAAZABcAAAACAAAAAAAaABcAAAACAAAAAAAbABcAAAACAAAAAAAcABcAAAACAAAAAAAdABcAAAACAAAAAAAYAB0AAAAAAAAAAAAeABcAAAACAAAAAAAfABcAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_iywne")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -72,7 +71,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAQACAAAAAAABAAAAAQACAAAAAAACAAAAAQACAAA
 tile_set = SubResource("TileSet_u5sy4")
 
 [node name="fireboy" parent="." instance=ExtResource("4_r72dd")]
-position = Vector2(513, 159)
+position = Vector2(87, 439)
 
 [node name="watergirl" parent="." instance=ExtResource("5_ijn0p")]
 position = Vector2(52, 384)
@@ -81,11 +80,8 @@ position = Vector2(52, 384)
 
 [node name="blue_diamond" parent="gems" instance=ExtResource("6_jmes4")]
 z_index = -1
-position = Vector2(470, 445)
+position = Vector2(278, 443)
 
 [node name="red_diamond" parent="gems" instance=ExtResource("7_tyxjt")]
 z_index = -1
-position = Vector2(344, 446)
-
-[node name="box" parent="." instance=ExtResource("10_r72dd")]
-position = Vector2(370, 144)
+position = Vector2(228, 445)

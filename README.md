@@ -17,8 +17,8 @@ A pesar de su apariencia simple, brilla por su diseño de niveles inteligente, s
 
 ## Mecánicas principales
 * Cada jugador controla a su personaje usando el mismo teclado:
-    - **Fireboy:** con las flechas direccionales.  
-    - **Watergirl:** con las teclas **WASD**.
+	- **Fireboy:** con las flechas direccionales.  
+	- **Watergirl:** con las teclas **WASD**.
 * Ambos pueden moverse lateralmente y saltar.
 * El objetivo de cada nivel es que ambos personajes lleguen a su respectiva puerta de salida.
 
@@ -50,9 +50,9 @@ A pesar de su apariencia simple, brilla por su diseño de niveles inteligente, s
 <br>
 
 * Al completar un nivel puedes obtener hasta 3 estrellas:
-    1. Completar el nivel.  
-    2. Recolectar todos los diamantes.  
-    3. Completar el nivel dentro de un tiempo establecido (no te dicen cuánto).
+	1. Completar el nivel.  
+	2. Recolectar todos los diamantes.  
+	3. Completar el nivel dentro de un tiempo establecido (no te dicen cuánto).
 
 <p align="center">
   <img width="500" height="455" alt="image" src="https://github.com/user-attachments/assets/279b1c54-ef14-433a-b899-aa7e970fae3a" />

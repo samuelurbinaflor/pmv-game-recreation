@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 200.0
+const JUMP_VELOCITY = -300.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
@@ -37,4 +37,5 @@ func die():
 
 # Diamonds
 func _on_hitbox_area_entered(area: Area2D) -> void:
-	area.queue_free()
+	if area.is_in_group("red_gem"):
+		area.queue_free()

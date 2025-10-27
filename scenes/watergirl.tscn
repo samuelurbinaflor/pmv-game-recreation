@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bkebvsu0ckubv"]
 
 [ext_resource type="Script" uid="uid://cgsowpe64cm7n" path="res://scripts/watergirl.gd" id="1_e38vc"]
-[ext_resource type="Texture2D" uid="uid://bdqxwp183u2xk" path="res://assets/drop.png" id="1_evcic"]
+[ext_resource type="Texture2D" uid="uid://bdqxwp183u2xk" path="res://assets/player/drop.png" id="1_evcic"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34thi"]
 animations = [{
@@ -35,7 +35,7 @@ shape = SubResource("CapsuleShape2D_apd1n")
 [node name="Hitbox" type="Area2D" parent="."]
 z_index = 1
 collision_layer = 2
-collision_mask = 168
+collision_mask = 208
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0, 3)
