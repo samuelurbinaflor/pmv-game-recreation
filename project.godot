@@ -21,6 +21,10 @@ window/size/viewport_width=656
 window/size/viewport_height=496
 window/stretch/mode="viewport"
 
+[global_group]
+
+water=""
+
 [input]
 
 w_left={
