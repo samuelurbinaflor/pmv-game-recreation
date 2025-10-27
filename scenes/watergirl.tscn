@@ -20,7 +20,8 @@ height = 26.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e38vc"]
 height = 26.0
 
-[node name="watergirl" type="CharacterBody2D"]
+[node name="watergirl" type="CharacterBody2D" groups=["watergirl"]]
+z_index = 1
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("1_e38vc")

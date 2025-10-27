@@ -1,12 +1,15 @@
-[gd_scene load_steps=14 format=4 uid="uid://bxpqc131ue83v"]
+[gd_scene load_steps=17 format=4 uid="uid://bxpqc131ue83v"]
 
 [ext_resource type="Texture2D" uid="uid://dibr7mx1iux4b" path="res://assets/tiles/lakes.png" id="1_1ey3t"]
+[ext_resource type="Script" uid="uid://b0x4sfotpxkit" path="res://scripts/level.gd" id="1_ijn0p"]
 [ext_resource type="Texture2D" uid="uid://cwsj74dn0mtax" path="res://assets/tiles/white-tiles.png" id="2_t0hvh"]
 [ext_resource type="Texture2D" uid="uid://cp257fbjrss6p" path="res://assets/tiles/black-tiles.png" id="3_kfebt"]
 [ext_resource type="PackedScene" uid="uid://q6mmmxqx2foc" path="res://scenes/fireboy.tscn" id="4_r72dd"]
 [ext_resource type="PackedScene" uid="uid://bkebvsu0ckubv" path="res://scenes/watergirl.tscn" id="5_ijn0p"]
 [ext_resource type="PackedScene" uid="uid://c18dm8ohwxg8u" path="res://scenes/objects/gems/blue_gem.tscn" id="6_jmes4"]
 [ext_resource type="PackedScene" uid="uid://bc6tfq6myci5x" path="res://scenes/objects/gems/red_gem.tscn" id="7_tyxjt"]
+[ext_resource type="PackedScene" uid="uid://byax8jm13qg3x" path="res://scenes/blue_door.tscn" id="9_r72dd"]
+[ext_resource type="PackedScene" uid="uid://cvbdnvhugo6gp" path="res://scenes/red_door.tscn" id="10_ijn0p"]
 [ext_resource type="PackedScene" uid="uid://feutxfunnlst" path="res://scenes/objects/box.tscn" id="10_r72dd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
@@ -60,6 +63,7 @@ sources/0 = SubResource("TileSetAtlasSource_iywne")
 sources/1 = SubResource("TileSetAtlasSource_p57ef")
 
 [node name="level_01" type="Node2D"]
+script = ExtResource("1_ijn0p")
 
 [node name="lakes" type="TileMapLayer" parent="."]
 z_index = 2
@@ -72,10 +76,10 @@ tile_map_data = PackedByteArray("AAAAAAAAAQACAAAAAAABAAAAAQACAAAAAAACAAAAAQACAAA
 tile_set = SubResource("TileSet_u5sy4")
 
 [node name="fireboy" parent="." instance=ExtResource("4_r72dd")]
-position = Vector2(500, 152)
+position = Vector2(350, 86)
 
 [node name="watergirl" parent="." instance=ExtResource("5_ijn0p")]
-position = Vector2(52, 384)
+position = Vector2(400, 86)
 
 [node name="gems" type="Node" parent="."]
 
@@ -89,3 +93,9 @@ position = Vector2(228, 445)
 
 [node name="box" parent="." instance=ExtResource("10_r72dd")]
 position = Vector2(370, 144)
+
+[node name="blue_door" parent="." instance=ExtResource("9_r72dd")]
+position = Vector2(496, 80)
+
+[node name="red_door" parent="." instance=ExtResource("10_ijn0p")]
+position = Vector2(560, 80)

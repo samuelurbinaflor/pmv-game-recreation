@@ -20,7 +20,7 @@ height = 26.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxg85"]
 height = 26.0
 
-[node name="fireboy" type="CharacterBody2D"]
+[node name="fireboy" type="CharacterBody2D" groups=["fireboy"]]
 z_index = 1
 collision_mask = 12
 script = ExtResource("1_cxg85")
