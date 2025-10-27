@@ -22,7 +22,7 @@ height = 26.0
 
 [node name="watergirl" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 12
 script = ExtResource("1_e38vc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

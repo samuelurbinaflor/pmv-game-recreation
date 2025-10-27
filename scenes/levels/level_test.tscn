@@ -1,12 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://c6j1xvn52j3c1"]
+[gd_scene load_steps=13 format=4 uid="uid://c6j1xvn52j3c1"]
 
 [ext_resource type="Texture2D" uid="uid://dibr7mx1iux4b" path="res://assets/tiles/lakes.png" id="1_bqmi1"]
 [ext_resource type="Texture2D" uid="uid://cwsj74dn0mtax" path="res://assets/tiles/white-tiles.png" id="2_8883n"]
 [ext_resource type="Texture2D" uid="uid://cp257fbjrss6p" path="res://assets/tiles/black-tiles.png" id="3_es4qh"]
 [ext_resource type="PackedScene" uid="uid://q6mmmxqx2foc" path="res://scenes/fireboy.tscn" id="4_s0ovu"]
 [ext_resource type="PackedScene" uid="uid://bkebvsu0ckubv" path="res://scenes/watergirl.tscn" id="5_nxmka"]
-[ext_resource type="PackedScene" uid="uid://c18dm8ohwxg8u" path="res://scenes/objects/gems/blue_gem.tscn" id="6_6racp"]
-[ext_resource type="PackedScene" uid="uid://bc6tfq6myci5x" path="res://scenes/objects/gems/red_gem.tscn" id="7_tdlkl"]
+[ext_resource type="PackedScene" uid="uid://qov0ich004d3" path="res://scenes/objects/ball.tscn" id="6_uh3ll"]
 [ext_resource type="PackedScene" uid="uid://feutxfunnlst" path="res://scenes/objects/box.tscn" id="8_bc127"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
@@ -29,7 +28,7 @@ physics_layer_1/collision_mask = 0
 physics_layer_2/collision_layer = 8
 physics_layer_2/collision_mask = 0
 physics_layer_3/collision_layer = 4
-physics_layer_3/collision_mask = 3
+physics_layer_3/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
@@ -55,7 +54,7 @@ texture = ExtResource("3_es4qh")
 
 [sub_resource type="TileSet" id="TileSet_u5sy4"]
 physics_layer_0/collision_layer = 4
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 sources/1 = SubResource("TileSetAtlasSource_p57ef")
 
@@ -73,24 +72,11 @@ tile_set = SubResource("TileSet_u5sy4")
 [node name="watergirl" parent="." instance=ExtResource("5_nxmka")]
 position = Vector2(52, 384)
 
-[node name="gems" type="Node" parent="."]
-
-[node name="blue_diamond" parent="gems" instance=ExtResource("6_6racp")]
-z_index = -1
-position = Vector2(470, 445)
-
-[node name="red_diamond" parent="gems" instance=ExtResource("7_tdlkl")]
-z_index = -1
-position = Vector2(344, 446)
-
-[node name="box" parent="." instance=ExtResource("8_bc127")]
-position = Vector2(370, 144)
-
-[node name="box2" parent="." instance=ExtResource("8_bc127")]
-position = Vector2(186, 242)
-
-[node name="box3" parent="." instance=ExtResource("8_bc127")]
-position = Vector2(273, 307)
-
 [node name="fireboy" parent="." instance=ExtResource("4_s0ovu")]
 position = Vector2(350, 370)
+
+[node name="ball" parent="." instance=ExtResource("6_uh3ll")]
+position = Vector2(248, 203)
+
+[node name="box" parent="." instance=ExtResource("8_bc127")]
+position = Vector2(148, 292)

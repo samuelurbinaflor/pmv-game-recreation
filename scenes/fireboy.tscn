@@ -22,7 +22,7 @@ height = 26.0
 
 [node name="fireboy" type="CharacterBody2D"]
 z_index = 1
-collision_mask = 4
+collision_mask = 12
 script = ExtResource("1_cxg85")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
