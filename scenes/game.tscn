@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://bxpqc131ue83v"]
+[gd_scene load_steps=13 format=4 uid="uid://bxpqc131ue83v"]
 
 [ext_resource type="Texture2D" uid="uid://dibr7mx1iux4b" path="res://assets/lakes.png" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cwsj74dn0mtax" path="res://assets/white-tiles.png" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cp257fbjrss6p" path="res://assets/black-tiles.png" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://q6mmmxqx2foc" path="res://scenes/fireboy.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bkebvsu0ckubv" path="res://scenes/watergirl.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://c18dm8ohwxg8u" path="res://scenes/blue_diamond.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://bc6tfq6myci5x" path="res://scenes/red_diamond.tscn" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_yqjtg")
@@ -70,7 +72,13 @@ tile_set = SubResource("TileSet_u5sy4")
 
 [node name="fireboy" parent="." instance=ExtResource("3_lnu2h")]
 z_index = -2
-position = Vector2(250, 439)
+position = Vector2(52, 448)
 
 [node name="watergirl" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(540, 438)
+position = Vector2(52, 384)
+
+[node name="blue_diamond" parent="." instance=ExtResource("6_p57ef")]
+position = Vector2(470, 445)
+
+[node name="red_diamond" parent="." instance=ExtResource("7_u5sy4")]
+position = Vector2(344, 445)

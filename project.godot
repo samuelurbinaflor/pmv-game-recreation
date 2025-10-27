@@ -73,7 +73,9 @@ retry={
 2d_physics/layer_3="Map"
 2d_physics/layer_4="Lava"
 2d_physics/layer_5="Water"
-2d_physics/layer_6="Green"
+2d_physics/layer_6="Bog"
+2d_physics/layer_7="Red_diamonds"
+2d_physics/layer_8="Blue_diamonds"
 
 [rendering]
 

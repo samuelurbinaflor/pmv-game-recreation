@@ -31,3 +31,7 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 func die():
 	sprite.hide()
 	get_tree().reload_current_scene()
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	area.queue_free()

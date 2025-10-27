@@ -26,10 +26,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-
+# When touch a lake
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	die()
 	
 func die():
 	sprite.hide()
 	get_tree().reload_current_scene()
+
+# Diamonds
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	area.queue_free()
