@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c71omj7drr7em"
-path="res://.godot/imported/blue_diamond.png-b7c633e35711e91517872a8ff0095641.ctex"
+uid="uid://dibr7mx1iux4b"
+path="res://.godot/imported/lakes.png-228e88b7cd79423aa4b3ad876e839ac8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blue_diamond.png"
-dest_files=["res://.godot/imported/blue_diamond.png-b7c633e35711e91517872a8ff0095641.ctex"]
+source_file="res://assets/tiles/lakes.png"
+dest_files=["res://.godot/imported/lakes.png-228e88b7cd79423aa4b3ad876e839ac8.ctex"]
 
 [params]
 

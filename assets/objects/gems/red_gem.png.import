@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp257fbjrss6p"
-path="res://.godot/imported/black-tiles.png-a9e49de50f2da6e36550f0935c8152bc.ctex"
+uid="uid://bjm0og6txq7m0"
+path="res://.godot/imported/red_gem.png-e423ed634194c74e8c7faf816da6560b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/black-tiles.png"
-dest_files=["res://.godot/imported/black-tiles.png-a9e49de50f2da6e36550f0935c8152bc.ctex"]
+source_file="res://assets/objects/gems/red_gem.png"
+dest_files=["res://.godot/imported/red_gem.png-e423ed634194c74e8c7faf816da6560b.ctex"]
 
 [params]
 

@@ -1,16 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc6tfq6myci5x"]
+[gd_scene load_steps=5 format=3 uid="uid://c18dm8ohwxg8u"]
 
-[ext_resource type="Texture2D" uid="uid://bjm0og6txq7m0" path="res://assets/red_diamond.png" id="1_2v3yo"]
+[ext_resource type="Texture2D" uid="uid://c71omj7drr7em" path="res://assets/objects/gems/blue_gem.png" id="1_yli4c"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2irl4"]
-atlas = ExtResource("1_2v3yo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5ikx"]
+atlas = ExtResource("1_yli4c")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y3dft"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2irl4")
+"texture": SubResource("AtlasTexture_y5ikx")
 }],
 "loop": true,
 "name": &"default",
@@ -20,8 +20,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kui34"]
 radius = 8.0
 
-[node name="red_diamond" type="Area2D" groups=["red_diamonds"]]
-collision_layer = 64
+[node name="blue_gem" type="Area2D"]
+collision_layer = 128
+collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_y3dft")

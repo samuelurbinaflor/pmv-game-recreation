@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjm0og6txq7m0"
-path="res://.godot/imported/red_diamond.png-e26f6b8d4b18b06f50afe11edb4449b2.ctex"
+uid="uid://qedfp0dlx7c"
+path="res://.godot/imported/box.png-90f8e91043850f3faf7b6777970e4a7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/red_diamond.png"
-dest_files=["res://.godot/imported/red_diamond.png-e26f6b8d4b18b06f50afe11edb4449b2.ctex"]
+source_file="res://assets/objects/box.png"
+dest_files=["res://.godot/imported/box.png-90f8e91043850f3faf7b6777970e4a7e.ctex"]
 
 [params]
 

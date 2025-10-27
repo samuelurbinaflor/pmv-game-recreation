@@ -13,17 +13,12 @@ config_version=5
 config/name="pmv-game-recreation"
 run/main_scene="uid://bxpqc131ue83v"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=656
 window/size/viewport_height=496
 window/stretch/mode="viewport"
-
-[global_group]
-
-water=""
 
 [input]
 

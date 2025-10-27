@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="button_data" load_steps=2 format=3 uid="uid://ddtuvlp5gf65t"]
-
-[ext_resource type="Script" path="res://resources/buttons/button_data.gd" id="1_wnoah"]
-
-[resource]
-script = ExtResource("1_wnoah")
-color = Color(1, 0, 0, 1)
-target = NodePath("../red_door")
