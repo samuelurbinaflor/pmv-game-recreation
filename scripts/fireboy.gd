@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 120.0
+const JUMP_VELOCITY = -350.0
+const PUSH_FORCE = 50.0
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-const PUSH_FORCE = 80.0
 
 
 func _physics_process(delta: float) -> void:
@@ -28,9 +29,9 @@ func _physics_process(delta: float) -> void:
 	
 	#RIGID BODY COLLISION
 	for i in get_slide_collision_count():
-		var c = get_slide_collision(i)
-		if c.get_collider() is RigidBody2D:
-			c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
+			var c = get_slide_collision(i)
+			if c.get_collider() is RigidBody2D:
+				c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
 
 	
 # When touch a lake

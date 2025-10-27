@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="pmv-game-recreation"
-run/main_scene="uid://c6j1xvn52j3c1"
+run/main_scene="uid://bxpqc131ue83v"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [display]

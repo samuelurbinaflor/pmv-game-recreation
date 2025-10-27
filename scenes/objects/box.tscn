@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://feutxfunnlst"]
+[gd_scene load_steps=4 format=3 uid="uid://feutxfunnlst"]
 
 [ext_resource type="Texture2D" uid="uid://qedfp0dlx7c" path="res://assets/objects/box.png" id="2_tf0hf"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2vq68"]
+friction = 0.5
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vq68"]
-size = Vector2(32, 32)
+size = Vector2(30, 30)
 
 [node name="box" type="RigidBody2D"]
 collision_layer = 8
 collision_mask = 15
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_2vq68")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_tf0hf")
