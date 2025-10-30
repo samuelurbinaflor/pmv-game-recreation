@@ -14,10 +14,6 @@ config/name="pmv-game-recreation"
 run/main_scene="uid://bxpqc131ue83v"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
-[autoload]
-
-global="*res://scripts/global.gd"
-
 [display]
 
 window/size/viewport_width=656

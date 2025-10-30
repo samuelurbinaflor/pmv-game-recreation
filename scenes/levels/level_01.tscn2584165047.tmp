@@ -81,7 +81,7 @@ tile_set = SubResource("TileSet_u5sy4")
 position = Vector2(383, 244)
 
 [node name="watergirl" parent="." instance=ExtResource("5_ijn0p")]
-position = Vector2(510, 246)
+position = Vector2(211, 308)
 
 [node name="gems" type="Node" parent="."]
 
@@ -102,22 +102,16 @@ position = Vector2(496, 80)
 [node name="red_door" parent="." instance=ExtResource("10_ijn0p")]
 position = Vector2(560, 80)
 
-[node name="d74029" type="Node" parent="."]
+[node name="platform" parent="." instance=ExtResource("12_jmes4")]
+position = Vector2(64, 264)
+end_pos = Vector2(64, 310)
 
-[node name="platform" parent="d74029" instance=ExtResource("12_jmes4")]
-position = Vector2(592, 200)
-end_pos = Vector2(592, 264)
-
-[node name="button" parent="d74029" node_paths=PackedStringArray("target_object") instance=ExtResource("13_tyxjt")]
-position = Vector2(522, 189)
-color = Color(0.84313726, 0.2509804, 0.16078432, 1)
+[node name="button" parent="." node_paths=PackedStringArray("target_object") instance=ExtResource("13_tyxjt")]
+position = Vector2(143, 333)
+speed = null
 target_object = NodePath("../platform")
 
-[node name="button2" parent="d74029" node_paths=PackedStringArray("target_object") instance=ExtResource("13_tyxjt")]
-position = Vector2(246, 253)
-color = Color(0.84313726, 0.2509804, 0.16078432, 1)
+[node name="button2" parent="." node_paths=PackedStringArray("target_object") instance=ExtResource("13_tyxjt")]
+position = Vector2(138, 253)
+speed = null
 target_object = NodePath("../platform")
-
-[node name="Node" type="Node" parent="."]
-
-[node name="platform" parent="Node" instance=ExtResource("12_jmes4")]
