@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bxpqc131ue83v"]
+[gd_scene load_steps=20 format=4 uid="uid://bxpqc131ue83v"]
 
 [ext_resource type="Texture2D" uid="uid://dibr7mx1iux4b" path="res://assets/tiles/lakes.png" id="1_1ey3t"]
 [ext_resource type="Script" uid="uid://b0x4sfotpxkit" path="res://scripts/level.gd" id="1_ijn0p"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://feutxfunnlst" path="res://scenes/objects/box.tscn" id="10_r72dd"]
 [ext_resource type="PackedScene" uid="uid://dl0vglnr1ykov" path="res://scenes/objects/platform.tscn" id="12_jmes4"]
 [ext_resource type="PackedScene" uid="uid://cjyrlu54etjtd" path="res://scenes/objects/button.tscn" id="13_tyxjt"]
+[ext_resource type="PackedScene" uid="uid://xsue40g5fns1" path="res://scenes/objects/lever.tscn" id="14_07lms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_1ey3t")
@@ -78,10 +79,10 @@ tile_map_data = PackedByteArray("AAAAAAAAAQACAAAAAAABAAAAAQACAAAAAAACAAAAAQACAAA
 tile_set = SubResource("TileSet_u5sy4")
 
 [node name="fireboy" parent="." instance=ExtResource("4_r72dd")]
-position = Vector2(383, 244)
+position = Vector2(236, 304)
 
 [node name="watergirl" parent="." instance=ExtResource("5_ijn0p")]
-position = Vector2(510, 246)
+position = Vector2(346, 338)
 
 [node name="gems" type="Node" parent="."]
 
@@ -120,4 +121,9 @@ target_object = NodePath("../platform")
 
 [node name="Node" type="Node" parent="."]
 
+[node name="lever" parent="Node" instance=ExtResource("14_07lms")]
+position = Vector2(153, 333)
+
 [node name="platform" parent="Node" instance=ExtResource("12_jmes4")]
+position = Vector2(64, 264)
+end_pos = Vector2(64, 328)
