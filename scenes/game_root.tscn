@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5cg7v72iqbsi"]
+
+[ext_resource type="PackedScene" uid="uid://dpm7odlgrrj1t" path="res://scenes/interfaces/levels_tree.tscn" id="1_iusj4"]
+[ext_resource type="PackedScene" uid="uid://bdlnmu5b0whhi" path="res://scenes/interfaces/level_interface.tscn" id="2_a1rh6"]
+[ext_resource type="PackedScene" uid="uid://bbkagbtywg18u" path="res://scenes/interfaces/pause_menu.tscn" id="3_j7aru"]
+[ext_resource type="PackedScene" uid="uid://cgxicq7iitddp" path="res://scenes/interfaces/settings_menu.tscn" id="4_ylec3"]
+[ext_resource type="PackedScene" uid="uid://dgnj1kc2qeg8i" path="res://scenes/interfaces/main_menu.tscn" id="5_6v30a"]
+
+[node name="game_root" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="levels_tree" parent="CanvasLayer" instance=ExtResource("1_iusj4")]
+visible = false
+
+[node name="level_interface" parent="CanvasLayer" instance=ExtResource("2_a1rh6")]
+visible = false
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("3_j7aru")]
+visible = false
+
+[node name="settings_menu" parent="CanvasLayer" instance=ExtResource("4_ylec3")]
+visible = false
+
+[node name="main_menu" parent="CanvasLayer" instance=ExtResource("5_6v30a")]
+anchors_preset = 15
+
+[node name="level_container" type="Node2D" parent="."]

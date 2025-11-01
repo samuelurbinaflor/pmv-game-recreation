@@ -27,12 +27,8 @@ func _physics_process(delta: float) -> void:
 	
 	if left in colliding_bodies and not is_active:
 		is_active = true
-		print("isactive")
-		
 		target_object.set_button_active(true)
 
 	elif right in colliding_bodies and is_active:
 		is_active = false
-		print("isnot")
-		
 		target_object.set_button_active(false)

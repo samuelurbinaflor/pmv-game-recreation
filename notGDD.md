@@ -2,7 +2,7 @@
 
 ## pa mañana (terminar nivel 1)
 arreglar colisiones de la box (no lo he arreglao, simplemente el entorno es mas grande pa que no se quede atascao)
-palanca
+palanca (funciona un poco rustico, pero funciona)
 
 ahi terminaria nivel 1 y podría hacer algo de interfaz no?
 

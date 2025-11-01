@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpm7odlgrrj1t"]
+
+[ext_resource type="Script" uid="uid://boka2wtq1326a" path="res://scripts/interfaces/levels_tree.gd" id="1_ha277"]
+
+[node name="levels_tree" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ha277")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 5
+
+[node name="Button_mainmenu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[connection signal="pressed" from="VBoxContainer/Button_mainmenu" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_mainmenu" to="." method="_on_button_mainmenu_pressed"]

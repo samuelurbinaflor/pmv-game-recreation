@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjyrlu54etjtd"]
 
-[ext_resource type="Script" uid="uid://54g0lfwl5m8i" path="res://scripts/button.gd" id="1_2wxwk"]
+[ext_resource type="Script" uid="uid://54g0lfwl5m8i" path="res://scripts/objects/button.gd" id="1_2wxwk"]
 [ext_resource type="Texture2D" uid="uid://dgj7eeudcbbxt" path="res://assets/objects/button.png" id="1_ufqlp"]
 
 [node name="button" type="AnimatableBody2D"]

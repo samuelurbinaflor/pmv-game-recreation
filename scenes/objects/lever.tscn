@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://xsue40g5fns1"]
 
 [ext_resource type="Texture2D" uid="uid://dgj7eeudcbbxt" path="res://assets/objects/button.png" id="1_06vmi"]
-[ext_resource type="Script" uid="uid://c2hi88ggmrs0r" path="res://scripts/lever.gd" id="1_donkj"]
+[ext_resource type="Script" uid="uid://c2hi88ggmrs0r" path="res://scripts/objects/lever.gd" id="1_donkj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_06vmi"]
 size = Vector2(2, 28)
