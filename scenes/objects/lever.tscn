@@ -1,15 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://xsue40g5fns1"]
+[gd_scene load_steps=5 format=3 uid="uid://xsue40g5fns1"]
 
 [ext_resource type="Texture2D" uid="uid://dgj7eeudcbbxt" path="res://assets/objects/button.png" id="1_06vmi"]
+[ext_resource type="Script" uid="uid://c2hi88ggmrs0r" path="res://scripts/lever.gd" id="1_donkj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_06vmi"]
 size = Vector2(2, 28)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_06vmi"]
+radius = 3.0
 
 [node name="lever" type="PinJoint2D"]
 physics_interpolation_mode = 1
 node_a = NodePath("base")
 node_b = NodePath("arm")
-angular_limit_enabled = true
+script = ExtResource("1_donkj")
 
 [node name="base" type="StaticBody2D" parent="."]
 collision_layer = 4
@@ -19,12 +23,12 @@ collision_mask = 3
 texture = ExtResource("1_06vmi")
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="base"]
-polygon = PackedVector2Array(16, 3, 16, 0, 7, -3, -7, -3, -16, 0, -16, 3)
+polygon = PackedVector2Array(16, 3, 16, 3, 7, -3, -7, -3, -16, 3, -16, 3)
 
 [node name="arm" type="RigidBody2D" parent="."]
 z_index = -1
 collision_layer = 4
-collision_mask = 7
+collision_mask = 2051
 
 [node name="Sprite2D" type="Sprite2D" parent="arm"]
 position = Vector2(0, -13)
@@ -35,3 +39,19 @@ texture = ExtResource("1_06vmi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arm"]
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_06vmi")
+
+[node name="left" type="StaticBody2D" parent="."]
+collision_layer = 2048
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left"]
+position = Vector2(-10, -6)
+shape = SubResource("CircleShape2D_06vmi")
+
+[node name="right" type="StaticBody2D" parent="."]
+collision_layer = 2048
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right"]
+position = Vector2(10, -6)
+shape = SubResource("CircleShape2D_06vmi")

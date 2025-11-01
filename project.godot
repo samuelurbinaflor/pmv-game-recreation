@@ -79,6 +79,7 @@ retry={
 2d_physics/layer_7="Bog"
 2d_physics/layer_8="Gems"
 2d_physics/layer_9="Doors"
+2d_physics/layer_12="lever_angular_limits"
 
 [rendering]
 

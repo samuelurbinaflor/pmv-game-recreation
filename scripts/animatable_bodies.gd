@@ -22,10 +22,10 @@ func set_button_active(active: bool):
 	else:
 		active_buttons -=1
 		
-	print(active_buttons)
 
 func set_color(color: Color):
-	sprite_2d.modulate = color
+	if sprite_2d and color:
+		sprite_2d.modulate = color
 	
 
 	

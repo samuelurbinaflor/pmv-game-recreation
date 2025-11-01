@@ -1,9 +1,7 @@
 # Esto no es un GDD
 
 ## pa mañana (terminar nivel 1)
-1 boton funciona, dos no
-hacer la puerta igual que la plataforma
-arreglar colisiones de la box
+arreglar colisiones de la box (no lo he arreglao, simplemente el entorno es mas grande pa que no se quede atascao)
 palanca
 
 ahi terminaria nivel 1 y podría hacer algo de interfaz no?

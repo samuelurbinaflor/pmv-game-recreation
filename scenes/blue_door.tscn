@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://byax8jm13qg3x"]
 
 [ext_resource type="Texture2D" uid="uid://chks2deq0gaxl" path="res://assets/player/blue_door.png" id="1_734je"]
-[ext_resource type="Script" uid="uid://o665676wtavq" path="res://scripts/door.gd" id="1_cxxar"]
+[ext_resource type="Script" uid="uid://o665676wtavq" path="res://scripts/exit_doors.gd" id="1_cxxar"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxxar"]
 atlas = ExtResource("1_734je")
