@@ -41,4 +41,5 @@ func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index
 	if target_object:
 		target_object.set_button_active(false)
 	
+
 	

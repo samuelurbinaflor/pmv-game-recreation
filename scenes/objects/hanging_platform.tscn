@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcbq67w0dhwwo"]
+
+[ext_resource type="Texture2D" uid="uid://7cil8b780qdv" path="res://assets/objects/ball.png" id="1_lpb2t"]
+[ext_resource type="Texture2D" uid="uid://d3ialfdypeb84" path="res://assets/objects/platform.png" id="2_yswsj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yev37"]
+radius = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpb2t"]
+size = Vector2(64, 8)
+
+[node name="hanging_platform" type="Node2D"]
+
+[node name="wall_point" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="wall_point"]
+texture = ExtResource("1_lpb2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall_point"]
+shape = SubResource("CircleShape2D_yev37")
+
+[node name="wall_joint" type="PinJoint2D" parent="."]
+node_a = NodePath("../wall_point")
+node_b = NodePath("../platform_point")
+
+[node name="platform" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="platform"]
+position = Vector2(-4.7683716e-07, 92)
+scale = Vector2(1.0000001, 0.4999999)
+texture = ExtResource("2_yswsj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
+position = Vector2(0, 92)
+shape = SubResource("RectangleShape2D_lpb2t")
+
+[node name="platform_point" type="RigidBody2D" parent="."]
+position = Vector2(0, 92)
+collision_layer = 8
+collision_mask = 15
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="platform_point"]
+scale = Vector2(0.62499994, 0.6250001)
+texture = ExtResource("1_lpb2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_point"]
+shape = SubResource("CircleShape2D_yev37")
+
+[node name="platform_joint" type="PinJoint2D" parent="."]
+position = Vector2(0, 92)
+node_a = NodePath("../platform_point")
+node_b = NodePath("../platform")
+bias = 0.9

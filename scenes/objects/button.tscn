@@ -16,7 +16,7 @@ polygon = PackedVector2Array(16, 3, 16, 0, 7, -2, -7, -2, -16, 0, -16, 3)
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 11
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(16, 3, 16, 0, 7, -3, -7, -3, -16, 0, -16, 3)
