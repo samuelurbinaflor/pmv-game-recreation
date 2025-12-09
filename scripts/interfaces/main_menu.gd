@@ -10,8 +10,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-	
-
-
 func _on_button_play_pressed() -> void:
 		get_tree().change_scene_to_file("res://scenes/interfaces/levels_tree.tscn")

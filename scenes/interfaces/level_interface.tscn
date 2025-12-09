@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdlnmu5b0whhi"]
+[gd_scene load_steps=3 format=3 uid="uid://bdlnmu5b0whhi"]
 
 [ext_resource type="Script" uid="uid://ch5imyepa2b01" path="res://scripts/interfaces/level_interface.gd" id="1_vh3oq"]
+[ext_resource type="PackedScene" uid="uid://bbkagbtywg18u" path="res://scenes/interfaces/pause_menu.tscn" id="2_w08yd"]
 
 [node name="level_interface" type="Control"]
+process_mode = 3
 z_index = 10
 layout_mode = 3
 anchors_preset = 15
@@ -17,5 +19,9 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "| |"
+
+[node name="pause_menu" parent="." instance=ExtResource("2_w08yd")]
+visible = false
+layout_mode = 0
 
 [connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]

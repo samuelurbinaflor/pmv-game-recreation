@@ -1,4 +1,5 @@
 extends Control
+@onready var pause_menu: Control = $pause_menu
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,10 +9,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("pause"):
+		pause_toggle()
 	
 
-
-
 func _on_pause_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/interfaces/pause_menu.tscn")
+	get_tree().paused = true
+	pause_menu.visible = true
+
+func pause_toggle() -> void:
+	if get_tree().paused:
+		get_tree().paused = false
+		pause_menu.visible = false
+	else:
+		get_tree().paused = true
+		pause_menu.visible = true
