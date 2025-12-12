@@ -31,7 +31,7 @@ text = "Fireboy and Watergirl
 "
 horizontal_alignment = 1
 
-[node name="Button_play" type="Button" parent="VBoxContainer"]
+[node name="Button_local" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Play local"
 
@@ -52,4 +52,12 @@ text = "Create game"
 layout_mode = 2
 text = "Join game"
 
-[connection signal="pressed" from="VBoxContainer/Button_play" to="." method="_on_button_play_pressed"]
+[node name="Button_start" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Start"
+
+[connection signal="pressed" from="VBoxContainer/Button_local" to="." method="_on_button_local_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_create" to="." method="_on_button_create_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_join" to="." method="_on_button_join_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_start" to="." method="_on_button_start_pressed"]

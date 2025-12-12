@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://q6mmmxqx2foc"]
+[gd_scene load_steps=7 format=3 uid="uid://q6mmmxqx2foc"]
 
 [ext_resource type="Texture2D" uid="uid://bm1c8bd5hx33f" path="res://assets/player/flame.png" id="1_0yc3l"]
-[ext_resource type="Script" uid="uid://iqags6mvq87v" path="res://scripts/fireboy.gd" id="1_cxg85"]
+[ext_resource type="Script" uid="uid://c1b4s36qeycw2" path="res://scripts/player.gd" id="1_cxg85"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34thi"]
 animations = [{
@@ -20,7 +20,12 @@ height = 26.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxg85"]
 height = 26.0
 
-[node name="fireboy" type="CharacterBody2D" groups=["watergirl"]]
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_cxg85"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="fireboy" type="CharacterBody2D" groups=["fireboy"]]
 z_index = 1
 collision_mask = 12
 script = ExtResource("1_cxg85")
@@ -38,6 +43,9 @@ collision_mask = 224
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_cxg85")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_cxg85")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

@@ -8,16 +8,16 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	animated_sprite_2d.play("open")
 	await animated_sprite_2d.animation_finished
 	is_fully_open = true
 	
 	
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	animated_sprite_2d.play_backwards("open")
 	is_fully_open = false

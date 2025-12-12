@@ -25,14 +25,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		position = position.move_toward(start_position, speed * delta)
 
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_area_2d_body_shape_entered(_body_rid: RID, _body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
 	bodies_on_area += 1
 	_active = true
 	if target_object:
 		target_object.set_button_active(true)
 	
 	
-func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_area_2d_body_shape_exited(_body_rid: RID, _body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
 	bodies_on_area -= 1
 
 	if bodies_on_area <= 0:

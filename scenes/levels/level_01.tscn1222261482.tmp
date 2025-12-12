@@ -67,9 +67,8 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 sources/1 = SubResource("TileSetAtlasSource_p57ef")
 
-[node name="level_01" type="Node2D" node_paths=PackedStringArray("spawners")]
+[node name="level_01" type="Node2D"]
 script = ExtResource("1_ijn0p")
-spawners = [NodePath("Spawners/fb_multiplayer"), NodePath("Spawners/wg_mutiplayer")]
 
 [node name="level_interface" parent="." instance=ExtResource("2_gi8m4")]
 
@@ -132,13 +131,11 @@ color = Color(1, 0.5803922, 1, 1)
 [node name="Spawners" type="Node2D" parent="."]
 
 [node name="fb_multiplayer" type="MultiplayerSpawner" parent="Spawners"]
-_spawnable_scenes = PackedStringArray("uid://q6mmmxqx2foc")
 spawn_path = NodePath("../fb_spawn")
 script = ExtResource("16_cwffn")
 network_player = ExtResource("4_r72dd")
 
 [node name="wg_mutiplayer" type="MultiplayerSpawner" parent="Spawners"]
-_spawnable_scenes = PackedStringArray("uid://bkebvsu0ckubv")
 spawn_path = NodePath("../wg_spawn")
 script = ExtResource("16_cwffn")
 network_player = ExtResource("5_ijn0p")
