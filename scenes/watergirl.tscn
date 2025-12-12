@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkebvsu0ckubv"]
+[gd_scene load_steps=7 format=3 uid="uid://bkebvsu0ckubv"]
 
 [ext_resource type="Script" uid="uid://cgsowpe64cm7n" path="res://scripts/watergirl.gd" id="1_e38vc"]
 [ext_resource type="Texture2D" uid="uid://bdqxwp183u2xk" path="res://assets/player/drop.png" id="1_evcic"]
@@ -20,7 +20,12 @@ height = 26.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e38vc"]
 height = 26.0
 
-[node name="watergirl" type="CharacterBody2D"]
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_e38vc"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="watergirl" type="CharacterBody2D" groups=["watergirl"]]
 z_index = 1
 collision_layer = 2
 collision_mask = 12
@@ -41,6 +46,9 @@ collision_mask = 208
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_e38vc")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_e38vc")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

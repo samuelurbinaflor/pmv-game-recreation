@@ -1,12 +1,4 @@
-extends CharacterBody2D
-
-
-const SPEED = 120.0
-const JUMP_VELOCITY = -230.0
-const PUSH_FORCE = 50.0
-const GRAVITY = 500.0
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-
+extends Player
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -32,15 +24,6 @@ func _physics_process(delta: float) -> void:
 			var c = get_slide_collision(i)
 			if c.get_collider() is RigidBody2D:
 				c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
-
-	
-# When touch a lake
-func _on_hitbox_body_entered(body: Node2D) -> void:
-	die()
-	
-func die():
-	sprite.hide()
-	get_tree().reload_current_scene()
 
 # Diamonds
 func _on_hitbox_area_entered(area: Area2D) -> void:

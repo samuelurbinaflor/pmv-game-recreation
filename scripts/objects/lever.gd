@@ -22,7 +22,7 @@ func _ready() -> void:
 		target_object.set_color(color)
 
 # Detecta las colisiones del arm con los angular limits left y right
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var colliding_bodies = arm.get_colliding_bodies()
 	
 	if left in colliding_bodies and not is_active:
