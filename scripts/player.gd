@@ -8,18 +8,25 @@ const PUSH_FORCE = 50.0
 const GRAVITY = 500.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+var input_scheme: String
+
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int())
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("f_jump") and is_on_floor():
+	if len(multiplayer.get_peers()) > 0 and not is_multiplayer_authority(): return 
+	
+	if Input.is_action_just_pressed(input_scheme + "_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("f_left", "f_right")
+	var direction := Input.get_axis(input_scheme + "_left", input_scheme + "_right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:

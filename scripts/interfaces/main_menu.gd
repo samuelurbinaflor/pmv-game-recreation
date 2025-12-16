@@ -13,7 +13,7 @@ func _on_button_create_pressed() -> void:
 	
 func _on_button_join_pressed() -> void:
 	Lobby.join_game()
-	Lobby.player_connected.connect(_on_joined_game)
+	#Lobby.player_connected.connect(_on_joined_game)
 	enable_buttons(true)
 	Lobby.player_info.name = "Watergirl"
 	
