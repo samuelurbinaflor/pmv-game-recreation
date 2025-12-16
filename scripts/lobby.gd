@@ -23,6 +23,7 @@ var players = {}
 var player_info = {"name": "Name"}
 
 var players_loaded = 0
+var game_started: bool = false
 
 func _ready():
 	multiplayer.peer_connected.connect(_on_player_connected)
@@ -53,7 +54,13 @@ func create_game():
 	players[1] = player_info
 	player_connected.emit(1, player_info)
 	#Lobby.debug_log("game created")
-	
+	game_start.connect(_on_game_started)
+
+func _on_game_started():
+	game_started = true
+	load_game.rpc("res://scenes/levels/level_01.tscn")	
+
+
 func start_game():
 	game_start.emit()
 

@@ -1,7 +1,6 @@
 extends Control
 
 
-
 func _on_button_local_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/interfaces/levels_tree.tscn")
 	
@@ -26,6 +25,5 @@ func enable_buttons(status=false):
 func _on_joined_game(peer_id, player_info):
 	Lobby.debug_log("joining game: "+str(player_info)+" ("+str(peer_id)+")")
 
-
 func _on_button_start_pressed() -> void:
-	Lobby.load_game("res://scenes/levels/level_01.tscn")
+	Lobby.start_game()
