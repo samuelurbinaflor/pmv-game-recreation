@@ -7,7 +7,8 @@ extends Node2D
 
 func _process(_delta: float) -> void:
 	if blue_door.is_fully_open and red_door.is_fully_open:
-		get_tree().reload_current_scene()
+		get_tree().paused
+		
 
 
 # Called when the node enters the scene tree for the first time.
