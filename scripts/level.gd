@@ -2,13 +2,19 @@ extends Node2D
 
 @onready var blue_door: Area2D = $blue_door
 @onready var red_door: Area2D = $red_door
+@onready var level_completed: Control = $level_completed
+@onready var level_interface: Control = $level_interface
 
 @export var spawners: Array[MultiplayerSpawner]
 
 func _process(_delta: float) -> void:
 	if blue_door.is_fully_open and red_door.is_fully_open:
-		get_tree().paused
-		
+		set_pause(true)
+		level_completed.visible = true
+
+@rpc("authority", "call_local")
+func set_pause(paused: bool):
+	get_tree().paused = paused
 
 
 # Called when the node enters the scene tree for the first time.
