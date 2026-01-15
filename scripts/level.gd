@@ -2,21 +2,37 @@ extends Node2D
 
 @onready var blue_door: Area2D = $blue_door
 @onready var red_door: Area2D = $red_door
+@onready var level_completed: Control = $level_completed
+@onready var level_interface: Control = $level_interface
 
 @export var spawners: Array[MultiplayerSpawner]
 
 func _process(_delta: float) -> void:
 	if blue_door.is_fully_open and red_door.is_fully_open:
-		get_tree().reload_current_scene()
+		set_pause(true)
+		level_completed.visible = true
+
+@rpc("authority", "call_local")
+func set_pause(paused: bool):
+	get_tree().paused = paused
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Preconfigure game.
-	if not multiplayer.is_server():
-		Lobby.player_loaded.rpc_id(1) # Tell the server that this peer has loaded.
+	## condición multiplayer
+	if len(multiplayer.get_peers()) > 0:
+		# Preconfigure game.
+		if not multiplayer.is_server():
+			Lobby.player_loaded.rpc_id(1) # Tell the server that this peer has loaded.
+		else:
+			start_game()
 	else:
-		start_game()
+		## instantiate local players
+		var fb_scene = $Spawners/fb_multiplayer.network_player
+		var wg_scene = $Spawners/wg_mutiplayer.network_player
+		get_node("Spawners/wg_spawn").add_child(wg_scene.instantiate())
+		get_node("Spawners/fb_spawn").add_child(fb_scene.instantiate())
+		
 
 func start_game():
 	# All peers are ready to receive RPCs in this scene.
