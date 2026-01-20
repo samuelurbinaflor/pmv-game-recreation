@@ -32,6 +32,7 @@ blue_door=""
 red_door=""
 fireboy=""
 watergirl=""
+level=""
 
 [input]
 
