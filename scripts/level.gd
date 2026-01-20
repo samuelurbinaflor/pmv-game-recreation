@@ -9,13 +9,28 @@ extends Node2D
 
 func _process(_delta: float) -> void:
 	if blue_door.is_fully_open and red_door.is_fully_open:
-		set_pause(true)
-		level_completed.visible = true
+		print("end level")
+		end_level()
+		
+	#if blue_door.is_fully_open and red_door.is_fully_open:
+		#set_pause(true)
+		#level_completed.visible = true
+
+func end_level():
+	set_pause.rpc(true)
+	show_level_completed.rpc()
+
 
 @rpc("authority", "call_local")
 func set_pause(paused: bool):
 	get_tree().paused = paused
 
+
+@rpc("authority", "call_local")
+func show_level_completed():
+	print("level completed")
+	level_completed.visible = true
+	level_interface.visible = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
