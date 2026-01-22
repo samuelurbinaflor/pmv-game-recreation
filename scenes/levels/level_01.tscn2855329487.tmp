@@ -68,7 +68,7 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 sources/1 = SubResource("TileSetAtlasSource_p57ef")
 
-[node name="level_01" type="Node2D" node_paths=PackedStringArray("spawners") groups=["level"]]
+[node name="level_01" type="Node2D" node_paths=PackedStringArray("spawners")]
 script = ExtResource("1_ijn0p")
 spawners = [NodePath("Spawners/fb_multiplayer"), NodePath("Spawners/wg_mutiplayer")]
 

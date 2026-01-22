@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://q6mmmxqx2foc"]
 
 [ext_resource type="Texture2D" uid="uid://bm1c8bd5hx33f" path="res://assets/player/flame.png" id="1_0yc3l"]
-[ext_resource type="Script" uid="uid://c1b4s36qeycw2" path="res://scripts/player.gd" id="1_cxg85"]
+[ext_resource type="Script" uid="uid://iqags6mvq87v" path="res://scripts/fireboy.gd" id="1_cxg85"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34thi"]
 animations = [{
