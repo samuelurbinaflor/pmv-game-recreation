@@ -1,31 +1,23 @@
 extends Player
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += GRAVITY * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("f_jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("f_left", "f_right")
-	if direction:
-		velocity.x = direction * SPEED
+var gem_counter = 0
+func _ready() -> void:
+	if len(multiplayer.get_peers()) > 0 :
+		input_scheme = "w"
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
-	
-	#RIGID BODY COLLISION
-	for i in get_slide_collision_count():
-			var c = get_slide_collision(i)
-			if c.get_collider() is RigidBody2D:
-				c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
+		input_scheme = "f"
 
 # Diamonds
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("red_gem"):
 		area.queue_free()
+		gem_counter += 1
+		report_gem_collected.rpc()
+
+
+@rpc("any_peer")
+func report_gem_collected():
+	if not multiplayer.is_server():
+		return
+
+	var level := get_tree().get_first_node_in_group("level")
+	level.on_red_gem_collected()

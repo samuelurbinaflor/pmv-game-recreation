@@ -1,8 +1,5 @@
-# Por hacer
-## General
-- contador de diamantes
-- temporizador
-- Marcador final de 3 estrellas
+# Tareas por hacer
 
-## Multiplayer
-- interfaz de usuario
+## General
+- 3 estrellas al final del nivel
+- UI final del nivel
