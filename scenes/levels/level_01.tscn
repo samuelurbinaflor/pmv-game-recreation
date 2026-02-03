@@ -92,7 +92,11 @@ tile_set = SubResource("TileSet_u5sy4")
 
 [node name="blue_diamond" parent="gems" instance=ExtResource("6_jmes4")]
 z_index = -1
-position = Vector2(477, 444)
+position = Vector2(119, 444)
+
+[node name="blue_diamond2" parent="gems" instance=ExtResource("6_jmes4")]
+z_index = -1
+position = Vector2(183, 439)
 
 [node name="red_diamond" parent="gems" instance=ExtResource("7_tyxjt")]
 z_index = -1

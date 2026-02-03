@@ -7,6 +7,8 @@ extends Node2D
 
 var red_gems_total := 0
 var red_gems_collected := 0
+var blue_gems_total := 0
+var blue_gems_collected := 0
 
 var blue_gems = 0
 var fb_scene
@@ -29,7 +31,7 @@ func _ready() -> void:
 		get_node("Spawners/fb_spawn").add_child(fb_scene.instantiate())
 		
 	red_gems_total =  get_tree().get_nodes_in_group("red_gem").size()
-	#blue_gems =  get_tree().get_nodes_in_group("blue_gem").size()
+	blue_gems_total =  get_tree().get_nodes_in_group("blue_gem").size()
 
 	
 func _process(_delta: float) -> void:
@@ -41,8 +43,8 @@ func _process(_delta: float) -> void:
 func on_red_gem_collected():
 	red_gems_collected += 1
 
-	if red_gems_collected == red_gems_total:
-		print("todas las gemas rojas recogidas")
+func on_blue_gem_collected():
+	blue_gems_collected += 1
 
 
 func end_level():
